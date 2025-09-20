@@ -15,6 +15,44 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Critical CSS inlined for faster LCP -->
+    <style>
+      :root {
+        --background: 45 100% 97%;
+        --foreground: 25 50% 15%;
+        --card: 0 0% 100%;
+        --card-foreground: 25 50% 15%;
+        --primary: 25 95% 55%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 120 40% 95%;
+        --secondary-foreground: 25 50% 15%;
+        --muted: 45 20% 96%;
+        --muted-foreground: 25 20% 50%;
+        --accent: 120 50% 88%;
+        --accent-foreground: 25 50% 15%;
+        --border: 45 30% 90%;
+        --warm-orange: 25 95% 55%;
+        --soft-green: 120 50% 45%;
+        --cream: 45 100% 97%;
+        --earth-brown: 25 50% 15%;
+        --gradient-hero: linear-gradient(135deg, hsl(25 95% 55%), hsl(35 90% 65%));
+        --shadow-warm: 0 10px 30px -10px hsl(25 95% 55% / 0.2);
+        --radius: 0.5rem;
+      }
+      * { box-sizing: border-box; }
+      body { 
+        margin: 0; 
+        background-color: hsl(var(--background)); 
+        color: hsl(var(--foreground)); 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+        line-height: 1.6;
+      }
+      #root { min-height: 100vh; }
+    </style>
+    
+    <!-- Preload the main CSS file -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
   </head>
 
   <body>
